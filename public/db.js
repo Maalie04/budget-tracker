@@ -23,9 +23,11 @@ request.onerror = function(e){
 };
 
 request.onsuccess = function (e) {
+    console.log('success');
     db = e.target.result;
 
     if(navigator.onLine){
+        console.log('Online!')
         checkDatabase();
     }
 };
