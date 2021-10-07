@@ -1,12 +1,13 @@
+const indexeDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB || window.shemIndexedDB;
 let db;
 let budgetVersion;
 
-const request = indexesDB.open("Budgetdb" || 21);
+const request = indexeDB.open("Budgetdb" || 21);
 
 request.onupgradeneeded = function (e) {
     console.log('Upgrade needed!!');
 
-    const db { oldVersion } = e;
+    const { oldVersion } = e;
     const newVersion = e.newVersion || db.version;
 
     console.log('Updated from ${oldVersion} to ${newVersion}');
@@ -40,7 +41,7 @@ function checkDatabase() {
     const store = transaction.objectStore('BudgetStore');
 
     const getAll = store.getAll();
-
+console.log(getAll);
     getAll.onsuccess = function(){
         if(getAll.result.length > 0) {
           fetch('/api/transaction/bulk', {
