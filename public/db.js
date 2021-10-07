@@ -2,6 +2,7 @@ const indexeDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexed
 let db;
 let budgetVersion;
 
+// Create a new db request for the budget database
 const request = indexeDB.open("Budgetdb" || 21);
 
 request.onupgradeneeded = function (e) {
@@ -19,10 +20,12 @@ request.onupgradeneeded = function (e) {
     }
 };
 
+// If the request is not successful, run this function
 request.onerror = function(e){
     console.log('Somethings not right! ${e.target.errorCode}');
 };
 
+// If the request is successful, run this function
 request.onsuccess = function (e) {
     console.log('success');
     db = e.target.result;
@@ -33,13 +36,15 @@ request.onsuccess = function (e) {
     }
 };
 
+
 function checkDatabase() {
     console.log('check db invoked');
 
+// Open a transaction
     let transaction = db.transaction(['BudgetStore'], 'readwrite');
-
+// Access BudgetStore
     const store = transaction.objectStore('BudgetStore');
-
+// Get all records from the store
     const getAll = store.getAll();
 console.log(getAll);
     getAll.onsuccess = function(){
