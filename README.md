@@ -38,10 +38,11 @@ This Budget Tracker app can be used to keep track of the amount of money added, 
 
 ![alt image](./public/assets/budgetPic.png)
 ![alt image](./public/assets/budgetPic1.png)
+![alt image](./public/assets/pic.png)
 
 ## Deploy
 
->[Heroku](https://enigmatic-oasis-24150.herokuapp.com/)
+>[Heroku](https://mysterious-fjord-17199.herokuapp.com/)
 
->[Github](https://github.com/Maalie04/Workout_Tracker/)
+>[Github](https://github.com/Maalie04/budget-tracker/)
 
