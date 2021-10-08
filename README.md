@@ -36,10 +36,8 @@
 This Budget Tracker app can be used to keep track of the amount of money added, or the amount withdrawn in the transaction. You can either add or subtract a new transaction.
 ## Screenshots
 
-![alt image](./public/2021-09-28(9).png)
-![alt image](./public/2021-09-28(11).png)
-![alt image](./public/2021-09-28(13).png)
-![alt image](./public/2021-09-28(14).png)
+![alt image](./public/assets/budgetPic.png)
+![alt image](./public/assets/budgetPic1.png)
 
 ## Deploy
 
